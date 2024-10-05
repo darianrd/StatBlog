@@ -88,14 +88,15 @@ data |> ggplot(aes(x = survived, y = fare, group = survived)) +
                color = "pink4")
 ```
 
-Our next customization is to add error bars to the whiskers of the boxplots using the *stat_boxplot* function with the *geom* and *width* arguments. *geom* is used to specify an element of a graph, while *width* specifies the width of that element.
+Our next customization is to add error bars to the whiskers of the boxplots using the *stat_boxplot* function with the *geom*, *width*, and *color*  arguments. *geom* is used to specify an element of a graph, while *width* specifies the width of that element.
 
 ```r
 data |> ggplot(aes(x = survived, y = fare, group = survived)) +
   geom_boxplot(fill = "pink2",
                color = "pink4") +
   stat_boxplot(geom = "errorbar",
-               width = 0.5)
+               width = 0.5,
+               color = "pink4")
 ```
 
 Our last customization is to add labels and change the background, which works exactly the same as before.
