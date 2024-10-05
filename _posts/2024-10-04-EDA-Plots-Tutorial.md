@@ -66,7 +66,7 @@ Here is the completed output.
 
 ![R Histogram](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/RHist.png)
 
-We can create a boxplot using a similar structure, except we will be adding a y-axis variable and a grouping variable within the aesthetic mapping (in the *aes* function). *group* is used to indicate which variable to split the boxplots on so that instead of one large boxplot, there are separate boxplots for each value of the grouping variable. Additionally, we will be using the *geom_boxplot* function in place of the *geom_histogram* function from the last example.
+We can create a boxplot using a similar structure, except we will be adding a y-axis variable and a grouping variable within the aesthetic mapping (in the *aes* function). *group* is used to indicate which variable to split the boxplots on so that instead of one large boxplot, there are separate boxplots for each value of the grouping variable. Additionally, we will be using the *geom_boxplot* function in place of the *geom_histogram* function from the last example. Adding labels works exactly the same as before.
 
 ```r
 data |> ggplot(aes(x = survived, y = fare, group = survived)) +
@@ -104,6 +104,7 @@ sns.histplot(data["age"], color = "pink", edgecolor = "maroon", bins = 20)
 Our next customization is, once again, adding labels to our graph. In Python, we will use four different functions to accomplish this—*plt.xlabel*, *plt.ylabel*, *plt.title*, and *plt.figtext*. These functions with respectively create labels for the x and y axes, a title, and a caption. There are two additional arguments required in the *plt.figtext* function which are the x and y coordinates for positioning the caption in relation to the graph.
 
 ```python
+sns.histplot(data["age"], color = "pink", edgecolor = "maroon", bins = 20)
 plt.xlabel("Age in Years")
 plt.ylabel("Frequency")
 plt.title("Age of Titanic Passengers")
