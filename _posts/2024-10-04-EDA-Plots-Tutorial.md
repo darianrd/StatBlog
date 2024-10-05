@@ -2,6 +2,7 @@
 layout: post
 title: "Tutorial: Create and Customize EDA Plots in R and Python"
 description: A tutorial on creating plots for exploratory data analysis using R and Python.
+comments: true
 ---
 
 # Introduction
