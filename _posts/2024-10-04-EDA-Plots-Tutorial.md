@@ -40,7 +40,7 @@ Our first plot will be a histogram of the age distribution of Titanic passengers
 data |> ggplot(aes(x = age))
 ```
 
-Our next customization is to create a histogram and set colors for the graph. We do this by using the *geom_histogram* function with the arguments *fill* and *color*. *Fill* is used to fill the whole shape of the graph with a specified color, while *color* is used to outline the shape of the graph with a specified color. Color options can be specified either by hexadecimal codes or from R's built-in color library. [Here is a list of colors in R's library](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). We will also adjust the width of the histogram bars using the *bins* argument.
+Our next customization is to create a histogram and set colors for the graph. We do this by using the *geom_histogram* function with the arguments *fill* and *color*. *fill* is used to fill the whole shape of the graph with a specified color, while *color* is used to outline the shape of the graph with a specified color. Color options can be specified either by hexadecimal codes or from R's built-in color library. [Here is a list of colors in R's library](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). We will also adjust the width of the histogram bars using the *bins* argument.
 
 ```
 data |> ggplot(aes(x = age)) +
@@ -48,3 +48,20 @@ data |> ggplot(aes(x = age)) +
                  color = "pink4",
                  bins = 20)
 ```
+
+Our next customization is to add labels to our graphs. This is done using the *labs* function (which stands for labels), and we will be adding labels to the x and y axes, as well as adding a title and caption to the graph.
+
+```
+data |> ggplot(aes(x = age)) +
+  geom_histogram(fill = "pink2",
+                 color = "pink4",
+                 bins = 20) +
+  labs(x = "Age in Years",
+       y = "Frequency",
+       title = "Age of Titanic Passengers",
+       caption = "Source: https://data.world/nrippner/titanic-disaster-dataset")
+```
+
+Here is the completed output.
+
+![RHist](Stat\ Blog\ Theme/assets/img/RHist.png)
