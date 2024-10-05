@@ -49,7 +49,7 @@ data |> ggplot(aes(x = age)) +
                  bins = 20)
 ```
 
-Our final customization is to add labels to our graphs. This is done using the *labs* function (which stands for labels), and we will be adding labels to the x and y axes, as well as adding a title and caption to the graph.
+Our next customization is to add labels to our graphs. This is done using the *labs* function (which stands for labels), and we will be adding labels to the x and y axes, as well as adding a title and caption to the graph.
 
 ```r
 data |> ggplot(aes(x = age)) +
@@ -62,11 +62,25 @@ data |> ggplot(aes(x = age)) +
        caption = "Source: https://data.world/nrippner/titanic-disaster-dataset")
 ```
 
+Our final customization is to change the background of the plot to make it white and remove grid lines. We do this using the *theme_classic* function with no arguments passed in.
+
+```r
+data |> ggplot(aes(x = age)) +
+  geom_histogram(fill = "pink2",
+                 color = "pink4",
+                 bins = 20) +
+  labs(x = "Age in Years",
+       y = "Frequency",
+       title = "Age of Titanic Passengers",
+       caption = "Source: https://data.world/nrippner/titanic-disaster-dataset") +
+  theme_classic()
+```
+
 Here is the completed output.
 
 ![R Histogram](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/RHist.png)
 
-We can create a boxplot using a similar structure, except we will be adding a y-axis variable and a grouping variable within the aesthetic mapping (in the *aes* function). *group* is used to indicate which variable to split the boxplots on so that instead of one large boxplot, there are separate boxplots for each value of the grouping variable. Additionally, we will be using the *geom_boxplot* function in place of the *geom_histogram* function from the last example. Adding labels works exactly the same as before.
+We can create a boxplot using a similar structure, except we will be adding a y-axis variable and a grouping variable within the aesthetic mapping (in the *aes* function). *group* is used to indicate which variable to split the boxplots on so that instead of one large boxplot, there are separate boxplots for each value of the grouping variable. Additionally, we will be using the *geom_boxplot* function in place of the *geom_histogram* function from the last example. Adding labels and changing the backgrounds works exactly the same as before.
 
 ```r
 data |> ggplot(aes(x = survived, y = fare, group = survived)) +
@@ -75,7 +89,8 @@ data |> ggplot(aes(x = survived, y = fare, group = survived)) +
   labs(x = "Passenger Survived",
        y = "Passenger Fare in Dollars",
        title = "Comparison of Titanic Passenger Fare to Survival Rate",
-       caption = "Source: https://data.world/nrippner/titanic-disaster-dataset")
+       caption = "Source: https://data.world/nrippner/titanic-disaster-dataset") +
+  theme_classic()
 ```
 
 Here is the completed output.
@@ -115,10 +130,10 @@ Here is the completed output.
 
 ![Python Histogram](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/PyHist.png)
 
-Again, when creating our boxplot, the format will be very similar to the histogram. In this case, we will call the *survived* and *fare* variables from our dataset. Customizing the colors is essentially the same as before, except that we will use the argument *linecolor* instead of *edgecolor* to specify the outline color for the graph. Adding labels to the graph works exactly the same as with the histogram.
+Again, when creating our boxplot, the format will be very similar to the histogram. In this case, we will call the *survived* and *fare* variables from our dataset. Customizing the colors is essentially the same as before, except that we will use the argument *linecolor* instead of *edgecolor* to specify the outline color for the graph. We will also be changing the outlier markers using the *flierprops* argument and changing the shape and fill color. Adding labels to the graph works exactly the same as with the histogram.
 
 ```python
-sns.boxplot(x = data["survived"], y = data["fare"], color = "pink", linecolor = "maroon")
+sns.boxplot(x = data["survived"], y = data["fare"], color = "pink", linecolor = "maroon", flierprops = {"marker":".", "markerfacecolor":"maroon")
 plt.xlabel("Passenger Survived")
 plt.ylabel("Passenger Fare in Dollars")
 plt.title("Comparison of Titanic Passenger Fare to Survival Rate")
