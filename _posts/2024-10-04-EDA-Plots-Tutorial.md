@@ -22,4 +22,16 @@ Many of you may be familiar with creating EDA plots in at least one programming 
 
 # Creating Plots
 
-Now, let's get into creating some EDA plots. For this tutorial, I will be suing Titanic passenger data from the [Titanic Disaster Dataset](https://data.world/nrippner/titanic-disaster-dataset). We'll start by learning how to create a scatterplot in R using the ggplot2 package.
+Now, let's get into creating some EDA plots. For this tutorial, I will be using Titanic passenger data from the [Titanic Disaster Dataset](https://data.world/nrippner/titanic-disaster-dataset). We'll start by learning how to create a histogram and boxplot in R using the ggplot2 package.
+
+### Plotting in R
+
+First, we will load the *tidyverse* package (which contains ggplot2) and read in our dataset.
+
+```
+library(tidyverse)
+
+data <- read.csv("~/Desktop/titanic.csv")
+```
+
+
