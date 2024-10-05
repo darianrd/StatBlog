@@ -26,7 +26,7 @@ Now, let's get into creating some EDA plots. For this tutorial, I will be using 
 
 ### Plotting in R
 
-First, we will load the *tidyverse* package (which contains ggplot2) and read in our dataset.
+First, we will load the *tidyverse* package (which contains *ggplot2*) and read in our dataset.
 
 ```
 library(tidyverse)
@@ -34,4 +34,17 @@ library(tidyverse)
 data <- read.csv("~/Desktop/titanic.csv")
 ```
 
+Our first plot will be a histogram of the age distribution of Titanic passengers. For this, we will pipe our data into the *ggplot* function and customize from there. Our first customization is to set the x-axis as the age variable, which is done by using the *aes* function within the *ggplot* function. *aes* stands for aesthetics and is used to specify how variables will be mapped in the visual representation.
 
+```
+data |> ggplot(aes(x = age))
+```
+
+Our next customization is to create a histogram and set colors for the graph. We do this by using the *geom_histogram* function with the arguments *fill* and *color*. *Fill* is used to fill the whole shape of the graph with a specified color, while *color* is used to outline the shape of the graph with a specified color. Color options can be specified either by hexadecimal codes or from R's built-in color library. [Here is a list of colors in R's library](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). We will also adjust the width of the histogram bars using the *bins* argument.
+
+```
+data |> ggplot(aes(x = age)) +
+  geom_histogram(fill = "pink2",
+                 color = "pink4",
+                 bins = 20)
+```
