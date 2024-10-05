@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tutorial: Create and Customize EDA Plots in R and Python"
-description: A tutorial for creating plots for exploratory data analysis using R and Python.
+description: A tutorial on creating plots for exploratory data analysis using R and Python.
 ---
 
 # Introduction
@@ -64,4 +64,4 @@ data |> ggplot(aes(x = age)) +
 
 Here is the completed output.
 
-![RHist](/assets/img/RHist.png)
+![RHist](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/RHist.png)
