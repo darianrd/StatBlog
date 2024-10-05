@@ -10,7 +10,7 @@ In this blog post, I will be explaining how to create EDA plots and add customiz
 
 ### What is EDA?
 
-In statistics, exploratory data analysis (or EDA) is a method of gaining information about the data we are working with before using it to create models and made predictions. EDA is typically used to summarize data through exploring patterns and relationships between the variables of interest and usually includes visual representations of the data, such as scatterplots and histograms.
+In statistics, exploratory data analysis (or EDA) is a method of gaining information about the data we are working with before using it to create models and make predictions. EDA is typically used to summarize data through exploring patterns and relationships between the variables of interest and usually includes visual representations of the data, such as scatterplots and histograms.
 
 ### Why learn how to analyze data in more than one language?
 
@@ -22,7 +22,7 @@ Many of you may be familiar with creating EDA plots in at least one programming 
 
 # Creating Plots
 
-Now, let's get into creating some EDA plots. For this tutorial, I will be using Titanic passenger data from the [Titanic Disaster Dataset](https://data.world/nrippner/titanic-disaster-dataset). We'll start by learning how to create a histogram and boxplot in R using the ggplot2 package.
+Now, let's get into creating some EDA plots. For this tutorial, I will be using Titanic passenger data from the [Titanic Disaster Dataset](https://data.world/nrippner/titanic-disaster-dataset). We'll start by learning how to create a histogram and boxplot in R using the *ggplot2* package.
 
 ### Plotting in R
 
@@ -34,7 +34,7 @@ library(tidyverse)
 data <- read.csv("~/Desktop/titanic.csv")
 ```
 
-Our first plot will be a histogram of the age distribution of Titanic passengers. For this, we will pipe our data into the *ggplot* function and customize from there. Our first customization is to set the x-axis as the age variable, which is done by using the *aes* function within the *ggplot* function. *aes* stands for aesthetics and is used to specify how variables will be mapped in the visual representation.
+Our first plot will be a histogram of the age distribution of Titanic passengers. For this, we will pipe our data into the *ggplot* function and customize from there. Our first customization is to set the x-axis as the *age* variable, which is done by using the *aes* function within the *ggplot* function. *aes* stands for aesthetics and is used to specify how variables will be mapped in the visual representation.
 
 ```r
 data |> ggplot(aes(x = age))
@@ -101,7 +101,7 @@ To create our histogram, we will use the *sns.histplot* function and call the *a
 sns.histplot(data["age"], color = "pink", edgecolor = "maroon", bins = 20)
 ```
 
-Our next customization is, once again, adding labels to our graph. In Python, we will use four different functions to accomplish this—*plt.xlabel*, *plt.ylabel*, *plt.title*, and *plt.figtext*. These functions with respectively create labels for the x and y axes, a title, and a caption. There are two additional arguments required in the *plt.figtext* function which are the x and y coordinates for positioning the caption in relation to the graph.
+Our next customization is, once again, adding labels to our graph. In Python, we will use four different functions to accomplish this—*plt.xlabel*, *plt.ylabel*, *plt.title*, and *plt.figtext*. These functions will respectively create labels for the x and y axes, a title, and a caption. There are two additional arguments required in the *plt.figtext* function which are the x and y coordinates for positioning the caption in relation to the graph.
 
 ```python
 sns.histplot(data["age"], color = "pink", edgecolor = "maroon", bins = 20)
