@@ -80,12 +80,32 @@ Here is the completed output.
 
 ![R Histogram](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/RHist.png)
 
-We can create a boxplot using a similar structure, except we will be adding a y-axis variable and a grouping variable within the aesthetic mapping (in the *aes* function). *group* is used to indicate which variable to split the boxplots on so that instead of one large boxplot, there are separate boxplots for each value of the grouping variable. Additionally, we will be using the *geom_boxplot* function in place of the *geom_histogram* function from the last example. Adding labels and changing the backgrounds works exactly the same as before.
+We can create a boxplot using a similar structure, except we will be adding a y-axis variable and a grouping variable within the aesthetic mapping (in the *aes* function). *group* is used to indicate which variable to split the boxplots on so that instead of one large boxplot, there are separate boxplots for each value of the grouping variable. Additionally, we will be using the *geom_boxplot* function in place of the *geom_histogram* function from the last example.
+
+```r
+data |> ggplot(aes(x = survived, y = fare, group = survived)) +
+  geom_boxplot(fill = "pink2",
+               color = "pink4")
+```
+
+Our next customization is to add error bars to the whiskers of the boxplots using the *stat_boxplot* function with the *geom* and *width* arguments. *geom* is used to specify an element of a graph, while *width* specifies the width of that element.
 
 ```r
 data |> ggplot(aes(x = survived, y = fare, group = survived)) +
   geom_boxplot(fill = "pink2",
                color = "pink4") +
+  stat_boxplot(geom = "errorbar",
+               width = 0.5)
+```
+
+Our last customization is to add labels and change the background, which works exactly the same as before.
+
+```r
+data |> ggplot(aes(x = survived, y = fare, group = survived)) +
+  geom_boxplot(fill = "pink2",
+               color = "pink4") +
+  stat_boxplot(geom = "errorbar",
+               width = 0.5) +
   labs(x = "Passenger Survived",
        y = "Passenger Fare in Dollars",
        title = "Comparison of Titanic Passenger Fare to Survival Rate",
