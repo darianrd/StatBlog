@@ -49,7 +49,7 @@ data |> ggplot(aes(x = age)) +
                  bins = 20)
 ```
 
-Our next customization is to add labels to our graphs. This is done using the *labs* function (which stands for labels), and we will be adding labels to the x and y axes, as well as adding a title and caption to the graph.
+Our final customization is to add labels to our graphs. This is done using the *labs* function (which stands for labels), and we will be adding labels to the x and y axes, as well as adding a title and caption to the graph.
 
 ```
 data |> ggplot(aes(x = age)) +
@@ -64,4 +64,4 @@ data |> ggplot(aes(x = age)) +
 
 Here is the completed output.
 
-![RHist](Stat\ Blog\ Theme/assets/img/RHist.png)
+![RHist](/assets/img/RHist.png)
