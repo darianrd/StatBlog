@@ -20,4 +20,6 @@ Many of you may be familiar with creating EDA plots in at least one programming 
 - It can help you learn how to approach data-related problems from different perspectives.
 - It makes you more marketable to potential employers.
 
+# Creating Plots
 
+Now, let's get into creating some EDA plots. For this tutorial, I will be suing Titanic passenger data from the [Titanic Disaster Dataset](https://data.world/nrippner/titanic-disaster-dataset). We'll start by learning how to create a scatterplot in R using the ggplot2 package.
