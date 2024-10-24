@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Tutorial: Create and Customize EDA Plots in R and Python"
-description: A tutorial on creating plots for exploratory data analysis using R and Python.
+title: "Tutorial: Data Exploration in Two Acts"
+description: A tutorial for approaching exploratory data analysis in R and Python
 ---
 
 # Introduction
 
-In this blog post, I will be explaining how to create EDA plots and add customizations to them in R and Python. First, let's talk about some basics of data analysis.
+In this blog post, I will be explaining how to create EDA plots and add customizations to them in R and Python. We will be discussing how to create a histogram and a boxplot in both R and Python. Our customizations of these plots will focus on making them interpretable, attractive, and creating a similar look between plots in the two languages. First, let's talk about some basics of data analysis.
 
 ### What is EDA?
 
