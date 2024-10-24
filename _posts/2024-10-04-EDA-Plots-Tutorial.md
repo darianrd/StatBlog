@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tutorial: Data Exploration in Two Acts"
+title: Data Exploration in Two Acts
 description: A tutorial for approaching exploratory data analysis in R and Python
 ---
 
