@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Only App You’ll Ever Need (For Analyzing Car Crash Data in Utah in 2022)
-description: Introducting a Streamlit app for analyzing the FARS data from my last blog post.
+description: Introducting a Streamlit app I created for analyzing the FARS data from my last blog post.
 ---
 
 # Introduction
@@ -43,7 +43,7 @@ To answer my first question, the Day of Week Graph once again makes it clear tha
 
 ![Day of Week Graph](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/Day%20of%20Week%20Graph.png)
 
-In answering my second question, We can use the new weather groups I’ve created. The moderate weather category (fog, smog, smoke, rain, and snow) have the lowest average fatalities, with all of them being 1 (the lowest possible number of fatalities in this dataset). The weather types in the mild category (clear and cloudy) each only have slightly above an average of 1 fatality. In the severe category, two of the weather categories (blowing snow, and sleet or hail) only have an average of 1 fatality each, but as I mentioned in my last post, the severe crosswinds category has an average of 1.33 fatalities, which is the highest of all the averages. The moderate weather category seems to be least likely to lead to a higher number fatalities, while the mild and severe weather categories both seem to have about the same likelihood of causing more fatalities.
+In answering my second question, we can use the new weather groups I’ve created. The moderate weather category (fog, smog, smoke, rain, and snow) have the lowest average fatalities, with all of them being 1 (the lowest possible number of fatalities in this dataset). The weather types in the mild category (clear and cloudy) each only have slightly above an average of 1 fatality. In the severe category, two of the weather categories (blowing snow, and sleet or hail) only have an average of 1 fatality each, but as I mentioned in my last post, the severe crosswinds category has an average of 1.33 fatalities, which is the highest of all the averages. The moderate weather category seems to be least likely to lead to a higher number fatalities, while the mild and severe weather categories both seem to have about the same likelihood of causing more fatalities.
 
 ![Mild Weather](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/Mild%20Weather.png)
 ![Moderate Weather](https://raw.githubusercontent.com/darianrd/StatBlog/refs/heads/main/assets/img/Moderate%20Weather.png)
